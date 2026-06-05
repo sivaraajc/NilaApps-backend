@@ -57,7 +57,3 @@ On first run, seed data loads 6 components and example path `lp-sat-adaptive-001
 | Linux/macOS | `./mvnw test` |
 
 Or with a global Maven install: `mvn test`
-
-## H2 console (optional)
-
-http://localhost:8000/h2-console — JDBC URL `jdbc:h2:file:./data/learningpathdb`

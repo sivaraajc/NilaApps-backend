@@ -30,9 +30,12 @@ JSON schemas live in [`schemas/`](schemas/):
 
 Or:
 
-```powershell
+PowerShell
 .\mvnw.cmd spring-boot:run
-```
+Command Prompt
+mvnw.cmd spring-boot:run
+Linux/macOS
+./mvnw spring-boot:run
 
 Server: http://localhost:8080
 

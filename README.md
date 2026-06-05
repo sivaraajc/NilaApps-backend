@@ -30,13 +30,13 @@ JSON schemas live in [`schemas/`](schemas/):
 
 Or:
 
-PowerShell
+```PowerShell
 .\mvnw.cmd spring-boot:run
 Command Prompt
 mvnw.cmd spring-boot:run
 Linux/macOS
 ./mvnw spring-boot:run
-
+```
 Server: http://localhost:8080
 
 On first run, seed data loads 6 components and example path `lp-sat-adaptive-001`.

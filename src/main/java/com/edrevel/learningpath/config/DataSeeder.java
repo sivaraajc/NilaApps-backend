@@ -78,7 +78,9 @@ public class DataSeeder implements CommandLineRunner {
         ClassPathResource resource = new ClassPathResource("seed/learning-path.example.json");
         try (InputStream in = resource.getInputStream()) {
             LearningPathDto example = objectMapper.readValue(in, LearningPathDto.class);
-            learningPathRepository.findById(example.getId()).ifPresent(learningPathRepository::delete);
+            if (example.id() != null) {
+                learningPathRepository.findById(example.id()).ifPresent(learningPathRepository::delete);
+            }
             learningPathService.save(example);
         }
     }

@@ -21,23 +21,21 @@ JSON schemas live in [`schemas/`](schemas/):
 ## Prerequisites
 
 - JDK 17+
+- Maven 3.9+ (optional — the project includes the Maven Wrapper)
 
 ## Run
 
-```powershell
-.\run-backend.ps1
-```
+From the project root (no global Maven install required — the wrapper downloads it automatically):
 
-Or:
+| Shell | Command |
+|-------|---------|
+| PowerShell | `.\mvnw.cmd spring-boot:run` |
+| Command Prompt | `mvnw.cmd spring-boot:run` |
+| Linux/macOS | `./mvnw spring-boot:run` |
 
-```PowerShell
-.\mvnw.cmd spring-boot:run
-Command Prompt
-mvnw.cmd spring-boot:run
-Linux/macOS
-./mvnw spring-boot:run
-```
-Server: http://localhost:8080
+If Maven is installed globally, `mvn spring-boot:run` also works.
+
+Server: http://localhost:8000
 
 On first run, seed data loads 6 components and example path `lp-sat-adaptive-001`.
 
@@ -52,10 +50,14 @@ On first run, seed data loads 6 components and example path `lp-sat-adaptive-001
 
 ## Tests
 
-```powershell
-.\mvnw.cmd test
-```
+| Shell | Command |
+|-------|---------|
+| PowerShell | `.\mvnw.cmd test` |
+| Command Prompt | `mvnw.cmd test` |
+| Linux/macOS | `./mvnw test` |
+
+Or with a global Maven install: `mvn test`
 
 ## H2 console (optional)
 
-http://localhost:8080/h2-console — JDBC URL `jdbc:h2:file:./data/learningpathdb`
+http://localhost:8000/h2-console — JDBC URL `jdbc:h2:file:./data/learningpathdb`
